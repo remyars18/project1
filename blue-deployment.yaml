@@ -13,7 +13,7 @@ spec:
         name: my-blue-app
     spec:
       containers:
-      - name: 
+      - name: blue-container  # Add a name for the container
         image: remyars/blue-image:latest
         ports:
         - containerPort: 80
