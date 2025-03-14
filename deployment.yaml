@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Blue-app
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      name: my-blue-app
+  template:
+    metadata:
+      labels:
+        name: my-blue-app
+    spec:
+      containers:
+      - name: 
+        image: remyars/blue-image:latest
+        ports:
+        - containerPort: 80
+          protocol: TCP
